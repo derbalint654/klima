@@ -1,0 +1,2 @@
+Ez a fájl elavult. A részletes leírás (feltöltés, élesítés, képek cseréje) a README.md-ben van.
+Az assets/img/rolam/andras.svg már nincs használatban, nyugodtan törölheted.

@@ -103,21 +103,9 @@
     }
   }
 
-  /* ---------- Kártyák: kurzort követő fény ---------- */
-  if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
-    $$('.service-card').forEach(function (card) {
-      card.addEventListener('pointermove', function (e) {
-        var r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
-    });
-  }
-
   /* ---------- „Tudtad?” érdekességek ---------- */
   var facts = [
     'Az első modern klímát 1902-ben Willis Carrier tervezte – de nem embereknek, hanem egy nyomdának, hogy a páratartalom ne hullámosítsa a papírt.',
-    'A nyári mozisiker, a „blockbuster” részben a klímának köszönhető: a mozik voltak az első hűtött épületek között, így az emberek nyáron oda menekültek a hőség elől.',
     'A klíma párátlanít is: egy fülledt nyári napon a kifolyócsövön akár 10 liternél is több víz távozhat.',
     'A klíma és a hűtőszekrény ugyanazon az elven működik: a hűtőközeg elpárolgása hőt von el. A klíma tulajdonképpen „beteszi a szobádat a hűtőbe”.',
     'A „klíma” szó a görög klima szóból ered, ami eredetileg lejtést, hajlásszöget jelentett – a napsugarak beesési szögére utalva.',
@@ -141,11 +129,15 @@
   if (!form) return;
   var ts = $('#ts'); if (ts) ts.value = String(Math.floor(Date.now() / 1000));
   var statusEl = $('#form-status'), submitBtn = $('#kuldes-gomb'), success = $('#form-success');
+  // A böngésző saját buborékjai helyett a saját, felolvasható hibaüzeneteinket használjuk.
+  // JS nélkül a böngésző beépített ellenőrzése és a send.php dolgozik.
+  form.noValidate = true;
   var labels = {
-    nev: 'a neved', telefon: 'a telefonszámod', email: 'az e-mail címed', telepules: 'a települést vagy kerületet',
-    szolgaltatas: 'Kérlek, válassz szolgáltatást.', uzenet: 'az üzenetet', adatkezeles: 'Az ajánlatkéréshez el kell fogadnod az adatkezelési tájékoztatót.'
+    nev: 'a neved', telefon: 'a telefonszámod', telepules: 'a települést vagy kerületet',
+    szolgaltatas: 'Kérlek, válassz szolgáltatást.', adatkezeles: 'Az ajánlatkéréshez el kell fogadnod az adatkezelési tájékoztatót.'
   };
-  var fields = $$('input:not([type="hidden"]):not(#weboldal), select, textarea', form);
+  var fields = $$('input:not([type="hidden"]):not([type="radio"]):not(#weboldal), select, textarea', form);
+  var phoneLink = '<a href="tel:+36303851475">+36 30 385 1475</a>';
   // JS nélküli beküldés után visszairányított hiba (send.php ?hiba=1)
   if (/[?&]hiba=1/.test(location.search)) {
     statusEl.textContent = 'Nem sikerült elküldeni az üzenetet. Kérlek, ellenőrizd az adatokat és próbáld újra.';
@@ -161,7 +153,7 @@
     }
     if (v.typeMismatch && el.type === 'email') return 'Kérlek, érvényes e-mail címet adj meg (pl. nev@pelda.hu).';
     if (v.patternMismatch && name === 'telefon') return 'Kérlek, érvényes telefonszámot adj meg (pl. +36 30 123 4567).';
-    if (v.tooShort) return 'Kérlek, írj legalább ' + el.minLength + ' karaktert.';
+    if (v.tooShort) return 'Kérlek, add meg a teljes neved.';
     if (v.tooLong) return 'Legfeljebb ' + el.maxLength + ' karakter lehet.';
     return 'Kérlek, ellenőrizd ezt a mezőt.';
   }
@@ -178,8 +170,8 @@
     el.addEventListener('change', function () { el.dataset.touched = '1'; check(el); });
   });
 
-  function setStatus(msg, isError) {
-    statusEl.textContent = msg;
+  function setStatus(msg, isError, asHtml) {
+    if (asHtml) statusEl.innerHTML = msg; else statusEl.textContent = msg;
     statusEl.classList.toggle('is-error', !!isError);
   }
 
@@ -194,8 +186,9 @@
       return;
     }
 
-    if (location.protocol === 'file:') {
-      setStatus('Helyi előnézetben az űrlap nem tud e-mailt küldeni – tárhelyre feltöltve (PHP-vel) működik.', true);
+    // Előnézet: helyi fájl vagy GitHub Pages – itt nincs PHP, ezért nem próbálunk küldeni.
+    if (location.protocol === 'file:' || /\.github\.io$/i.test(location.hostname)) {
+      setStatus('Ez az oldal előnézete, innen az űrlap még nem küld üzenetet. Hívj inkább: ' + phoneLink + '.', true, true);
       return;
     }
 
@@ -226,6 +219,7 @@
             });
           }
           setStatus((data && data.message) || 'Hiba történt a küldés közben. Kérlek, próbáld újra, vagy hívj: +36 30 385 1475.', true);
+          var firstErr = $('[aria-invalid="true"]', form); if (firstErr) firstErr.focus();
         }
       })
       .catch(function () {

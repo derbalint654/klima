@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Klímaszerelés Budapest és Pomáz környékén | Dér András klímaszerelő</title>
-  <meta name="description" content="Klíma beszerzése, szerelése, tisztítása, fertőtlenítése, javítása és szivárgáskeresés Budapesten és Pomáz környékén. Kérjen ingyenes árajánlatot Dér Andrástól!">
+  <meta name="description" content="Klíma beszerzése, szerelése, tisztítása, fertőtlenítése, javítása és szivárgáskeresés Budapesten és Pomáz környékén. Kérj ingyenes árajánlatot Dér Andrástól!">
   <meta name="author" content="Dér András">
   <meta name="theme-color" content="#0B1A78">
-  <!-- SEO: ha megvan a végleges domain, írd át mindenhol az andrasklima.hu-t -->
+  <!-- SEO: az andrasklima.hu domain még nincs megvéve; amíg nincs, a canonical/og/JSON-LD címek nem élnek (lásd README). -->
   <link rel="canonical" href="https://andrasklima.hu/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="hu_HU">
@@ -17,21 +17,146 @@
   <meta property="og:image" content="https://andrasklima.hu/assets/img/social/og-image.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
+    "@id": "https://andrasklima.hu/#vallalkozas",
     "name": "Dér András – Klímaszerelés",
     "url": "https://andrasklima.hu/",
     "telephone": "+36303851475",
     "email": "info@andrasklima.hu",
     "image": "https://andrasklima.hu/assets/img/social/og-image.jpg",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "addressLocality": "Pomáz", "addressCountry": "HU" },
-    "areaServed": ["Budapest", "Pomáz", "Szentendre", "Budakalász", "Csobánka", "Üröm", "Solymár", "Pilisborosjenő", "Tahitótfalu", "Dunakeszi"],
-    "founder": { "@type": "Person", "name": "Dér András" }
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pomáz",
+      "postalCode": "2013",
+      "addressCountry": "HU",
+      "streetAddress": "[ANDRÁS: utca, házszám – vagy töröld, ha nem akarod kiírni]"
+    },
+    "openingHours": "[ANDRÁS: nyitvatartás, pl. Mo-Fr 08:00-17:00]",
+    "areaServed": [
+      "Budapest",
+      "Pomáz",
+      "Szentendre",
+      "Budakalász",
+      "Csobánka",
+      "Üröm",
+      "Solymár",
+      "Pilisborosjenő",
+      "Tahitótfalu",
+      "Dunakeszi"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Dér András"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Klímás szolgáltatások",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Klímaberendezések beszerzése",
+            "url": "https://andrasklima.hu/#beszerzes"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Klíma felszerelése, beütemezése",
+            "url": "https://andrasklima.hu/#felszereles"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Klímatisztítás",
+            "url": "https://andrasklima.hu/#tisztitas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Klímaberendezések fertőtlenítése",
+            "url": "https://andrasklima.hu/#fertotlenites"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Klímaberendezések javítása",
+            "url": "https://andrasklima.hu/#javitas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Szivárgás keresése",
+            "url": "https://andrasklima.hu/#szivargas"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Mennyi ideig tart egy telepítés?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Egy átlagos split klíma beszerelése [ANDRÁS: kb. hány óra / hány nap egy átlagos szerelés?]. A pontos időt a felméréskor megmondom, és előre egyeztetjük az időpontot."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kell-e engedély társasházban?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Társasházban a kültéri egység a közös homlokzatra kerül, ezért általában kell hozzá a társasház (a közös képviselő) hozzájárulása, és egyes településeken, kerületekben a helyi településképi rendelet is előírhat bejelentést. Érdemes ezzel kezdeni. [ANDRÁS: segítesz az engedélyeztetésben, vagy csak tanácsot adsz?]"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Milyen gyakran kell tisztítani a klímát?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Legalább évente egyszer, lehetőleg a nyári szezon előtt. Ha sokat megy a klíma, háziállat van a lakásban, vagy allergiás valaki, évente kétszer is megéri. [ANDRÁS: ezt ajánlod te is?]"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Mekkora klíma kell a szobámba?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Durva ökölszabályként egy kb. 25 m²-es szobához 2,5 kW, egy kb. 35 m²-eshez 3,5 kW körüli klíma való. A tájolás, a szigetelés, az ablakok és a belmagasság viszont sokat számít, ezért a felméréskor kiszámolom, mekkora kell nálad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Van-e garancia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A készülékre a gyártói garancia vonatkozik, a szerelésre pedig én vállalok garanciát. [ANDRÁS: hány év a gyártói garancia a szerelt márkákra, és hány év a te szerelési garanciád? Milyen márkákkal dolgozol?]"
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -66,12 +191,14 @@
           <li><a href="#terulet">Terület</a></li>
           <li><a href="#miert-klima">Miért klíma?</a></li>
           <li><a href="#arak">Árak</a></li>
+          <li><a href="#gyik">GYIK</a></li>
           <li><a href="#rolam">Rólam</a></li>
           <li class="nav-cta-li"><a class="btn btn-small" href="#ajanlatkeres">Ajánlatkérés</a></li>
         </ul>
       </nav>
 
       <div class="header-tools">
+        <a class="header-phone" href="tel:+36303851475">+36 30 385 1475</a>
         <a class="icon-btn phone-btn" href="tel:+36303851475" aria-label="Hívás: +36 30 385 1475">
           <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
         </a>
@@ -96,17 +223,17 @@
       </div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Klímaszerelés · Budapest &amp; Pomáz környéke</p>
+          <p class="hero-sub">Klímaszerelés Budapesten és Pomáz környékén</p>
           <h1 id="hero-cim">Legyen bent <em>22&nbsp;fok</em>, amikor kint 35.</h1>
           <p class="lead">Klíma beszerzése, felszerelése, tisztítása, fertőtlenítése, javítása és szivárgáskeresés – egy kézből, korrekt áron, pontos határidővel.</p>
           <div class="hero-actions">
             <a class="btn" href="#ajanlatkeres">Ingyenes ajánlatot kérek <svg aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
             <a class="btn btn-ghost" href="tel:+36303851475"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> +36 30 385 1475</a>
           </div>
-          <ul class="hero-facts">
-            <li><strong>A+++</strong> energiaosztályú készülékek</li>
-            <li><strong>4 kWh</strong> hő 1 kWh áramból</li>
-            <li><strong>−15 °C-ig</strong> fűt is</li>
+          <ul class="hero-facts" role="list">
+            <li><strong>A++</strong> <span>energiaosztályú inverteres klímák</span></li>
+            <li><strong>3–5 kWh</strong> <span>hő 1 kWh áramból</span></li>
+            <li><strong>−15 °C-ig</strong> <span>fűt is télen</span></li>
           </ul>
         </div>
 
@@ -137,41 +264,41 @@
     <section class="section" id="szolgaltatasok" aria-labelledby="szolg-cim">
       <div class="wrap">
         <header class="section-head reveal">
-          <p class="kicker"><span>01</span> Szolgáltatások</p>
+          <p class="kicker">Szolgáltatások</p>
           <h2 id="szolg-cim">Mindent intézek a klímád körül</h2>
           <p>A választástól a beszerelésen át az éves karbantartásig – nem kell három különböző embert hívnod.</p>
         </header>
 
         <ul class="service-grid" role="list">
-          <li class="service-card reveal">
+          <li class="service-card reveal" id="beszerzes">
             <svg class="service-icon" aria-hidden="true" focusable="false"><use href="#i-cart"/></svg>
             <h3>Klímaberendezések beszerzése</h3>
-            <p>Segítek kiválasztani a lakásodhoz illő teljesítményű, megbízható márkájú inverteres készüléket, és beszerzem neked – kedvezőbb áron, mint a polcról.</p>
+            <p><span class="svc-short">Segítek kiválasztani és beszerzem a lakásodhoz illő klímát.</span><span class="svc-long">Segítek kiválasztani a lakásodhoz illő teljesítményű, megbízható inverteres készüléket, és beszerzem neked.</span></p>
           </li>
-          <li class="service-card reveal">
+          <li class="service-card reveal" id="felszereles">
             <svg class="service-icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>
             <h3>Felszerelés és beütemezés</h3>
-            <p>Előzetes felmérés, egyeztetett időpont, tiszta munka. A telepítés után beüzemelem a klímát és megmutatom, hogyan használd a leggazdaságosabban.</p>
+            <p><span class="svc-short">Felmérés, egyeztetett időpont, beüzemelés és betanítás.</span><span class="svc-long">Előzetes felmérés, egyeztetett időpont, tiszta munka. A telepítés után beüzemelem a klímát, és megmutatom, hogyan használd a leggazdaságosabban.</span></p>
           </li>
-          <li class="service-card reveal">
+          <li class="service-card reveal" id="tisztitas">
             <svg class="service-icon" aria-hidden="true" focusable="false"><use href="#i-sparkle"/></svg>
             <h3>Klímatisztítás</h3>
-            <p>A beltéri és kültéri egység alapos, vegyszeres tisztítása. A tiszta klíma kevesebb áramot fogyaszt, csendesebb és tovább bírja.</p>
+            <p><span class="svc-short">Kevesebb áram, csendesebb működés, hosszabb élettartam.</span><span class="svc-long">A beltéri és kültéri egység alapos, vegyszeres tisztítása. A tiszta klíma kevesebb áramot fogyaszt, csendesebb és tovább bírja.</span></p>
           </li>
-          <li class="service-card reveal">
+          <li class="service-card reveal" id="fertotlenites">
             <svg class="service-icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
             <h3>Klímaberendezések fertőtlenítése</h3>
-            <p>Penész, baktériumok és kellemetlen szag ellen. Különösen ajánlott allergiásoknak, kisgyerekes családoknak és szezonkezdés előtt.</p>
+            <p><span class="svc-short">Penész, baktériumok és kellemetlen szag ellen.</span><span class="svc-long">Penész, baktériumok és kellemetlen szag ellen. Különösen ajánlott allergiásoknak, kisgyerekes családoknak és szezonkezdés előtt.</span></p>
           </li>
-          <li class="service-card reveal">
+          <li class="service-card reveal" id="javitas">
             <svg class="service-icon" aria-hidden="true" focusable="false"><use href="#i-wrench"/></svg>
             <h3>Klímaberendezések javítása</h3>
-            <p>Nem hűt, csöpög, hibakódot ír vagy furcsa hangot ad? Gyors hibafeltárás és javítás, a legtöbb márkánál.</p>
+            <p><span class="svc-short">Nem hűt, csöpög, hibakódot ír? Megkeresem a hibát és javítom.</span><span class="svc-long">Nem hűt, csöpög, hibakódot ír vagy furcsa hangot ad? Gyors hibafeltárás és javítás.</span></p>
           </li>
-          <li class="service-card reveal">
+          <li class="service-card reveal" id="szivargas">
             <svg class="service-icon" aria-hidden="true" focusable="false"><use href="#i-drop"/></svg>
             <h3>Szivárgás keresése</h3>
-            <p>Ha gyengül a hűtés, gyakran hűtőközeg szivárog. Megkeresem a hiba pontos helyét, javítom, majd szakszerűen újratöltöm a rendszert.</p>
+            <p><span class="svc-short">Megtalálom a szivárgást, javítom, majd újratöltöm a rendszert.</span><span class="svc-long">Ha gyengül a hűtés, gyakran hűtőközeg szivárog. Megkeresem a hiba pontos helyét, javítom, majd szakszerűen újratöltöm a rendszert.</span></p>
           </li>
         </ul>
       </div>
@@ -181,14 +308,14 @@
     <section class="section section-dark" id="terulet" aria-labelledby="terulet-cim">
       <div class="wrap area-grid">
         <div class="area-copy reveal">
-          <p class="kicker"><span>02</span> Terület</p>
+          <p class="kicker">Terület</p>
           <h2 id="terulet-cim">Budapesten és Pomáz környékén szerelek klímát</h2>
           <p>Pomázi szerelőként a Dunakanyar és Budapest északi része a „hazai pályám”, de a főváros bármelyik kerületébe szívesen kimegyek. Rövid kiszállási idő, helyismeret, és ha baj van, nem napokat kell várnod.</p>
           <ul class="town-list" aria-label="Kiemelt települések">
             <li>Pomáz</li><li>Szentendre</li><li>Budakalász</li><li>Csobánka</li><li>Pilisborosjenő</li><li>Üröm</li><li>Solymár</li><li>Tahitótfalu</li><li>Dunakeszi</li><li>Budapest – minden kerület</li>
           </ul>
 
-          <div class="funfact" aria-labelledby="funfact-cim">
+          <div class="funfact">
             <h3 id="funfact-cim"><span aria-hidden="true">✶</span> Tudtad?</h3>
             <p id="funfact-text" aria-live="polite">Az első modern klímát 1902-ben Willis Carrier tervezte – de nem embereknek, hanem egy nyomdának, hogy a páratartalom ne hullámosítsa a papírt.</p>
             <button class="btn btn-small btn-ice" type="button" id="funfact-btn">Mutass még egy érdekességet</button>
@@ -199,29 +326,45 @@
                alt="Vázlatos térkép a kiszállási körzetről: Pomáz, Szentendre, Budakalász, Csobánka, Üröm, Dunakeszi és Budapest.">
         </figure>
       </div>
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>Pomáz</span><span>Szentendre</span><span>Budakalász</span><span>Budapest</span><span>Csobánka</span><span>Üröm</span><span>Solymár</span><span>Pilisborosjenő</span><span>Dunakeszi</span><span>Tahitótfalu</span>
-          <span>Pomáz</span><span>Szentendre</span><span>Budakalász</span><span>Budapest</span><span>Csobánka</span><span>Üröm</span><span>Solymár</span><span>Pilisborosjenő</span><span>Dunakeszi</span><span>Tahitótfalu</span>
-        </div>
-      </div>
     </section>
 
     <!-- MIÉRT KLÍMA -->
     <section class="section" id="miert-klima" aria-labelledby="miert-cim">
       <div class="wrap">
         <header class="section-head reveal">
-          <p class="kicker"><span>03</span> Miért klíma?</p>
+          <p class="kicker">Miért klíma?</p>
           <h2 id="miert-cim">„Eddig is kibírtuk nélküle” – igen, de minek?</h2>
           <p>A nyarak évről évre melegebbek, a kánikulás napok száma Magyarországon az elmúlt évtizedekben jelentősen nőtt. A klíma ma már nem luxus, hanem a pihenés, a munka és az egészség alapfeltétele – ráadásul télen fűtésre is az egyik legolcsóbb megoldás.</p>
         </header>
+
+        <!-- Hangulatképek (Unsplash, lásd LICENSES.md). Nem András munkái. -->
+        <div class="photo-band reveal">
+          <figure class="photo photo-main">
+            <img src="assets/img/fotok/nappali-800.webp"
+                 srcset="assets/img/fotok/nappali-800.webp 800w, assets/img/fotok/nappali-1600.webp 1600w"
+                 sizes="(max-width: 860px) 100vw, 680px" width="1600" height="1066" loading="lazy" decoding="async"
+                 alt="Világos nappali kanapéval és nagy ablakokkal, a fal tetején fehér beltéri klímaegységgel.">
+          </figure>
+          <figure class="photo photo-side">
+            <img src="assets/img/fotok/nyar-800.webp"
+                 srcset="assets/img/fotok/nyar-800.webp 800w, assets/img/fotok/nyar-1600.webp 1600w"
+                 sizes="(max-width: 860px) 100vw, 440px" width="1600" height="1280" loading="lazy" decoding="async"
+                 alt="Tűző napon álló sárga házfal, rajta egy kültéri klímaegység erős árnyékkal.">
+          </figure>
+          <figure class="photo photo-side">
+            <img src="assets/img/fotok/tel-800.webp"
+                 srcset="assets/img/fotok/tel-800.webp 800w, assets/img/fotok/tel-1600.webp 1600w"
+                 sizes="(max-width: 860px) 100vw, 440px" width="1600" height="1370" loading="lazy" decoding="async"
+                 alt="Zúzmarás ablaküveg télen, mögötte havas fák, bent egy függőlámpa.">
+          </figure>
+        </div>
 
         <div class="why-grid">
           <article class="why-card reveal">
             <img src="assets/img/miert/alvas.svg" width="400" height="300" loading="lazy" decoding="async"
                  alt="Illusztráció: éjszakai hálószoba, a klíma hűvös levegőt fúj az alvó ember felé.">
             <h3>Végre kialszod magad</h3>
-            <p>Az alváskutatók szerint a hálószoba ideális hőmérséklete 18–20 °C körül van. 28 fokban forgolódsz, másnap fáradt vagy. Egy csendes inverteres klíma halkabb, mint a suttogás, és egész éjjel tartja a hőfokot.</p>
+            <p>Az alváskutatók szerint a hálószoba ideális hőmérséklete 18–20 °C körül van. 28 fokban forgolódsz, másnap fáradt vagy. Egy csendes inverteres klíma egész éjjel tartja a hőfokot.</p>
           </article>
           <article class="why-card reveal">
             <img src="assets/img/miert/futes.svg" width="400" height="300" loading="lazy" decoding="async"
@@ -233,14 +376,14 @@
             <img src="assets/img/miert/levego.svg" width="400" height="300" loading="lazy" decoding="async"
                  alt="Illusztráció: a klíma szűrőjén átáramló tiszta levegő, a pollen kívül marad.">
             <h3>Tisztább, szárazabb levegő</h3>
-            <p>A klíma nemcsak hűt, hanem párátlanít és szűr is: egy nyári napon akár több liter vizet von ki a levegőből, a szűrő pedig felfogja a por és pollen nagy részét. Az allergiások ezt az első héten érzik.</p>
+            <p>A klíma nemcsak hűt, hanem párátlanít és szűr is: egy nyári napon akár több liter vizet von ki a levegőből, a szűrő pedig felfogja a por és a pollen egy részét.</p>
           </article>
         </div>
 
         <ul class="stat-row reveal" role="list">
-          <li><span class="stat-num" data-count="2" data-suffix="%">0%</span><span class="stat-label">kb. ennyivel csökken a szellemi teljesítmény minden fokkal 25 °C felett</span></li>
-          <li><span class="stat-num" data-count="4" data-suffix="×">0×</span><span class="stat-label">annyi hőt ad le, mint amennyi áramot fogyaszt (jó hatásfokú inverteres klíma)</span></li>
-          <li><span class="stat-num" data-count="15" data-prefix="−" data-suffix=" °C">0 °C</span><span class="stat-label">kinti hidegben is megbízhatóan fűtenek a mai modellek</span></li>
+          <li><span class="stat-num">3–5×</span><span class="stat-label">annyi hőt ad le, mint amennyi áramot fogyaszt egy inverteres klíma</span></li>
+          <li><span class="stat-num" data-count="15" data-prefix="−" data-suffix=" °C">−15 °C</span><span class="stat-label">kinti hidegben is fűtenek a mai modellek</span></li>
+          <li><span class="stat-num">18–20 °C</span><span class="stat-label">az alváshoz ajánlott hálószoba-hőmérséklet</span></li>
         </ul>
         <p class="why-cta reveal">Még gondolkodsz? <a href="#ajanlatkeres">Kérj egy kötelezettségmentes felmérést</a> – megmondom, megéri-e nálad.</p>
       </div>
@@ -250,10 +393,12 @@
     <section class="section section-paper" id="arak" aria-labelledby="arak-cim">
       <div class="wrap">
         <header class="section-head reveal">
-          <p class="kicker"><span>04</span> Árak</p>
+          <p class="kicker">Árak</p>
           <h2 id="arak-cim">Átlátható árak, rejtett költségek nélkül</h2>
           <p>Tájékoztató árak. A pontos összeget a helyszíni felmérés után, írásban kapod meg – és ahhoz tartom magam.</p>
         </header>
+
+        <p class="vat-note reveal">Az árak [ANDRÁS: bruttó árak, ÁFÁ-val – vagy alanyi adómentes vagy? Írd meg, és ide kerül a pontos szöveg.]</p>
 
         <div class="price-grid">
           <article class="price-card reveal">
@@ -307,18 +452,53 @@
       </div>
     </section>
 
+    <!-- GYIK -->
+    <section class="section section-paper section-tight" id="gyik" aria-labelledby="gyik-cim">
+      <div class="wrap faq-wrap">
+        <header class="section-head reveal">
+          <p class="kicker">GYIK</p>
+          <h2 id="gyik-cim">Gyakori kérdések</h2>
+        </header>
+        <div class="faq-list reveal">
+          <details class="faq">
+            <summary><h3>Mennyi ideig tart egy telepítés?</h3></summary>
+            <p>Egy átlagos split klíma beszerelése <mark class="ph">[ANDRÁS: kb. hány óra / hány nap egy átlagos szerelés?]</mark>. A pontos időt a felméréskor megmondom, és előre egyeztetjük az időpontot.</p>
+          </details>
+          <details class="faq">
+            <summary><h3>Kell-e engedély társasházban?</h3></summary>
+            <p>Társasházban a kültéri egység a közös homlokzatra kerül, ezért általában kell hozzá a társasház (a közös képviselő) hozzájárulása, és egyes településeken, kerületekben a helyi településképi rendelet is előírhat bejelentést. Érdemes ezzel kezdeni. <mark class="ph">[ANDRÁS: segítesz az engedélyeztetésben, vagy csak tanácsot adsz?]</mark></p>
+          </details>
+          <details class="faq">
+            <summary><h3>Milyen gyakran kell tisztítani a klímát?</h3></summary>
+            <p>Legalább évente egyszer, lehetőleg a nyári szezon előtt. Ha sokat megy a klíma, háziállat van a lakásban, vagy allergiás valaki, évente kétszer is megéri. <mark class="ph">[ANDRÁS: ezt ajánlod te is?]</mark></p>
+          </details>
+          <details class="faq">
+            <summary><h3>Mekkora klíma kell a szobámba?</h3></summary>
+            <p>Durva ökölszabályként egy kb. 25 m²-es szobához 2,5 kW, egy kb. 35 m²-eshez 3,5 kW körüli klíma való. A tájolás, a szigetelés, az ablakok és a belmagasság viszont sokat számít, ezért a felméréskor kiszámolom, mekkora kell nálad.</p>
+          </details>
+          <details class="faq">
+            <summary><h3>Van-e garancia?</h3></summary>
+            <p>A készülékre a gyártói garancia vonatkozik, a szerelésre pedig én vállalok garanciát. <mark class="ph">[ANDRÁS: hány év a gyártói garancia a szerelt márkákra, és hány év a te szerelési garanciád? Milyen márkákkal dolgozol?]</mark></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- RÓLAM -->
     <section class="section" id="rolam" aria-labelledby="rolam-cim">
       <div class="wrap about-grid">
         <figure class="about-photo reveal">
-          <img src="assets/img/rolam/andras.svg" width="480" height="560" loading="lazy" decoding="async"
-               alt="Dér András klímaszerelő portréja (illusztráció)">
+          <img src="assets/img/rolam/andras-480.webp"
+               srcset="assets/img/rolam/andras-480.webp 480w, assets/img/rolam/andras-960.webp 960w"
+               sizes="(max-width: 860px) 300px, 420px" width="960" height="1125" loading="lazy" decoding="async"
+               alt="Dér András, fehér pólóban, világos fal előtt mosolyog.">
         </figure>
         <div class="about-copy reveal">
-          <p class="kicker"><span>05</span> Rólam</p>
+          <p class="kicker">Rólam</p>
           <h2 id="rolam-cim">Dér András vagyok, pomázi klímaszerelő</h2>
           <p>Hiszek abban, hogy egy klímaszerelés akkor jó, ha utána egy porszem sem marad a lakásban, a készülék csendben teszi a dolgát, és évekig nem kell rá gondolni. Ezért minden munkát felméréssel kezdek, és csak olyan megoldást ajánlok, amit a saját otthonomba is beszerelnék.</p>
           <p>Egyedül dolgozom, így mindig velem beszélsz – nem egy diszpécserrel. Amit megbeszélünk, azt én csinálom meg.</p>
+          <p class="placeholder-note">[ANDRÁS: hány éve szerelsz klímát, és milyen végzettséged, képesítésed van (pl. F-gáz)? Egy mondat erről sokat ad a bizalomhoz.]</p>
           <ul class="contact-list" role="list">
             <li><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><a href="tel:+36303851475">+36 30 385 1475</a></li>
             <li><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><a href="mailto:info@andrasklima.hu">info@andrasklima.hu</a></li>
@@ -332,9 +512,9 @@
     <section class="section section-dark" id="ajanlatkeres" aria-labelledby="ajanlat-cim">
       <div class="wrap form-grid">
         <div class="form-intro reveal">
-          <p class="kicker"><span>06</span> Ajánlatkérés</p>
+          <p class="kicker">Ajánlatkérés</p>
           <h2 id="ajanlat-cim">Kérj ingyenes árajánlatot</h2>
-          <p>Írd meg pár sorban, mire van szükséged, és 24 órán belül visszajelzek. Sürgős? Hívj nyugodtan: <a href="tel:+36303851475">+36 30 385 1475</a>.</p>
+          <p>Elég a neved, a telefonszámod és hogy mire van szükséged – visszahívlak. Sürgős? Hívj nyugodtan: <a href="tel:+36303851475">+36 30 385 1475</a>.</p>
           <ol class="steps">
             <li>Elküldöd az űrlapot</li>
             <li>Visszahívlak, egyeztetünk</li>
@@ -343,36 +523,36 @@
         </div>
 
         <div class="form-card reveal">
-          <form id="ajanlat-form" action="send.php" method="post" novalidate>
-            <p class="form-note">Minden mező kitöltése kötelező <span aria-hidden="true">(*)</span>.</p>
+          <form id="ajanlat-form" action="send.php" method="post">
+            <p class="form-note">A <span aria-hidden="true">*</span><span class="sr-only">csillaggal</span> jelölt mezők kötelezők.</p>
 
             <div class="field">
-              <label for="nev">Név <span aria-hidden="true">*</span></label>
+              <label for="nev">Név <span class="req" aria-hidden="true">*</span></label>
               <input id="nev" name="nev" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="nev-hiba">
               <p class="field-error" id="nev-hiba"></p>
             </div>
 
             <div class="field-row">
               <div class="field">
-                <label for="telefon">Telefonszám <span aria-hidden="true">*</span></label>
+                <label for="telefon">Telefonszám <span class="req" aria-hidden="true">*</span></label>
                 <input id="telefon" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 \+\(\)\/\-]{7,20}" placeholder="+36 30 123 4567" aria-describedby="telefon-hiba">
                 <p class="field-error" id="telefon-hiba"></p>
               </div>
               <div class="field">
-                <label for="email">E-mail cím <span aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="email-hiba">
+                <label for="email">E-mail cím <span class="opt">(nem kötelező)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="120" aria-describedby="email-hiba">
                 <p class="field-error" id="email-hiba"></p>
               </div>
             </div>
 
             <div class="field-row">
               <div class="field">
-                <label for="telepules">Település / kerület <span aria-hidden="true">*</span></label>
+                <label for="telepules">Település / kerület <span class="req" aria-hidden="true">*</span></label>
                 <input id="telepules" name="telepules" type="text" autocomplete="address-level2" required maxlength="80" aria-describedby="telepules-hiba">
                 <p class="field-error" id="telepules-hiba"></p>
               </div>
               <div class="field">
-                <label for="szolgaltatas">Szolgáltatás <span aria-hidden="true">*</span></label>
+                <label for="szolgaltatas">Szolgáltatás <span class="req" aria-hidden="true">*</span></label>
                 <select id="szolgaltatas" name="szolgaltatas" required aria-describedby="szolgaltatas-hiba">
                   <option value="">Válassz…</option>
                   <option>Klímaberendezés beszerzése</option>
@@ -387,9 +567,18 @@
               </div>
             </div>
 
+            <fieldset class="field choice-group">
+              <legend>Mikor érsz rá? <span class="opt">(nem kötelező)</span></legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="idopont" value="Hétköznap délelőtt"><span>Hétköznap délelőtt</span></label>
+                <label class="choice"><input type="radio" name="idopont" value="Hétköznap délután"><span>Hétköznap délután</span></label>
+                <label class="choice"><input type="radio" name="idopont" value="Hétvégén"><span>Hétvégén</span></label>
+              </div>
+            </fieldset>
+
             <div class="field">
-              <label for="uzenet">Üzenet <span aria-hidden="true">*</span></label>
-              <textarea id="uzenet" name="uzenet" rows="4" required minlength="10" maxlength="2000" placeholder="Pl. 25 m²-es hálószobába szeretnék klímát, 2. emeleti lakás." aria-describedby="uzenet-hiba"></textarea>
+              <label for="uzenet">Üzenet <span class="opt">(nem kötelező)</span></label>
+              <textarea id="uzenet" name="uzenet" rows="4" maxlength="2000" placeholder="Pl. 25 m²-es hálószobába szeretnék klímát, 2. emeleti lakás." aria-describedby="uzenet-hiba"></textarea>
               <p class="field-error" id="uzenet-hiba"></p>
             </div>
 
@@ -402,7 +591,7 @@
 
             <div class="field field-check">
               <input id="adatkezeles" name="adatkezeles" type="checkbox" value="igen" required aria-describedby="adatkezeles-hiba">
-              <label for="adatkezeles">Elolvastam és elfogadom az <a href="adatkezeles.html">adatkezelési tájékoztatót</a>. <span aria-hidden="true">*</span></label>
+              <label for="adatkezeles">Elolvastam és elfogadom az <a href="adatkezeles.html">adatkezelési tájékoztatót</a>. <span class="req" aria-hidden="true">*</span></label>
               <p class="field-error" id="adatkezeles-hiba"></p>
             </div>
 
@@ -418,7 +607,7 @@
               <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
             </div>
             <h3>Köszönöm, megkaptam az üzeneted!</h3>
-            <p>24 órán belül jelentkezem a megadott telefonszámon vagy e-mailben. Ha sürgős, hívj: <a href="tel:+36303851475">+36 30 385 1475</a>.</p>
+            <p>Hamarosan visszahívlak a megadott telefonszámon. Ha sürgős, hívj: <a href="tel:+36303851475">+36 30 385 1475</a>.</p>
             <button class="btn btn-small btn-ice" type="button" id="uj-uzenet">Új üzenet írása</button>
           </div>
         </div>
@@ -434,32 +623,36 @@
           <li><strong>Dér András</strong></li>
           <li><a href="tel:+36303851475"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>+36 30 385 1475</a></li>
           <li><a href="mailto:info@andrasklima.hu"><svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>info@andrasklima.hu</a></li>
+          <li><span class="footer-plain"><svg aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Pomáz és Budapest környéke</span></li>
         </ul>
       </section>
       <section aria-labelledby="f-szolg">
         <h2 id="f-szolg" class="footer-title">Szolgáltatások</h2>
-        <ul role="list">
-          <li><a href="#szolgaltatasok">Klímaberendezések beszerzése</a></li>
-          <li><a href="#szolgaltatasok">Klímatisztítás</a></li>
-          <li><a href="#szolgaltatasok">Klímaberendezések javítása</a></li>
-          <li><a href="#szolgaltatasok">Szivárgás keresése</a></li>
-          <li><a href="#szolgaltatasok">Klímaberendezések fertőtlenítése</a></li>
-          <li><a href="#szolgaltatasok">Felszerelés, beütemezés</a></li>
+        <ul role="list" class="footer-cols">
+          <li><a href="#beszerzes">Klímaberendezések beszerzése</a></li>
+          <li><a href="#felszereles">Felszerelés, beütemezés</a></li>
+          <li><a href="#tisztitas">Klímatisztítás</a></li>
+          <li><a href="#fertotlenites">Klímaberendezések fertőtlenítése</a></li>
+          <li><a href="#javitas">Klímaberendezések javítása</a></li>
+          <li><a href="#szivargas">Szivárgás keresése</a></li>
         </ul>
       </section>
+      <!-- FACEBOOK: ha lesz valódi oldal, ide kerüljön vissza egy harmadik oszlop:
       <section aria-labelledby="f-fb">
         <h2 id="f-fb" class="footer-title">Facebook</h2>
-        <p>Munkák, tippek, szezonális akciók – kövess Facebookon!</p>
-        <!-- FACEBOOK: ide írd be a végleges linket a href-be -->
-        <a class="fb-link" href="#" aria-label="Dér András Klímaszerelés Facebook-oldala (hamarosan)">
-          <svg aria-hidden="true" focusable="false"><use href="#i-fb"/></svg> Facebook-oldal <small>(hamarosan)</small>
-        </a>
+        <a class="fb-link" href="https://www.facebook.com/IDE_JON_AZ_OLDAL"><svg aria-hidden="true" focusable="false"><use href="#i-fb"/></svg> Kövess Facebookon</a>
       </section>
+      -->
     </div>
     <div class="wrap copyright">
-      <p>© <span id="ev">2026</span> Dér András – Klímaszerelés. Minden jog fenntartva. · <a href="adatkezeles.html">Adatkezelés</a></p>
+      <p>© <span id="ev">2026</span> Dér András – Klímaszerelés. Minden jog fenntartva. · <a href="adatkezeles.html">Adatkezelés</a> · Fotók: <a href="https://unsplash.com/">Unsplash</a></p>
     </div>
   </footer>
+
+  <nav class="mobile-bar" aria-label="Gyors elérés">
+    <a class="btn btn-dark" href="tel:+36303851475"><svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Hívás</a>
+    <a class="btn" href="#ajanlatkeres">Ajánlatot kérek</a>
+  </nav>
 
   <script src="assets/js/main.js" defer></script>
 </body>
